@@ -24,7 +24,7 @@ export const forgetPassword = async (req, res) => {
 
     const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET_KEY, { expiresIn: "1d" });
 
-    const resetLink = `https://shortys.netlify.app/login/reset-password/${user._id}/${token}`;
+    const resetLink = `https://rad-mooncake-e8a6b6.netlify.app/login/reset-password/${user._id}/${token}`;
     const mailOptions = {
       from: process.env.GMAIL_USER,
       to: email,
